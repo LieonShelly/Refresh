@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.author             = { "lieon" => "lieonCX@163.com" }
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "http://EXAMPLE/Refresh.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/lieonCX/Refresh.git", :tag => s.version }
 
   s.source_files  = 'Source'
   s.resources = 'Source/*.xib'
