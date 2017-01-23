@@ -47,7 +47,6 @@ extension ViewController {
     }
     
     @objc private func loadData() {
-        print(".....")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.refresh.endRefreshing()
             self.tableView.reloadData()

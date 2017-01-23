@@ -71,15 +71,12 @@ extension LRefreshControl {
                             height: height)
         if sv.isDragging {
             if height > contentOffsetY && refreshView.state == .normal {
-                print("放手刷新")
                 refreshView.state = .pulling
             } else if height <= contentOffsetY && refreshView.state == .pulling {
-                print("使劲拽")
                 refreshView.state = .normal
             }
         } else {
             if refreshView.state == .pulling  {
-                print("准备开始刷新")
                 beginRefresh()
                 
             }
