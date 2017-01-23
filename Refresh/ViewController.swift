@@ -17,7 +17,6 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
 }
@@ -44,7 +43,6 @@ extension ViewController {
         refresh.refreshHandler = {
            self.loadData()
         }
-
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
