@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
     fileprivate lazy var refresh: LRefreshControl = {
         let refresh = LRefreshControl()
         return refresh
