@@ -12,6 +12,7 @@
 		CD56A7071E2870CB0095125C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD56A7051E2870CB0095125C /* Main.storyboard */; };
 		CD56A7091E2870CB0095125C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD56A7081E2870CB0095125C /* Assets.xcassets */; };
 		CD56A70C1E2870CB0095125C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD56A70A1E2870CB0095125C /* LaunchScreen.storyboard */; };
+		CD6CAA9B1E35DA2900809A5B /* LRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6CAA9A1E35DA2900809A5B /* LRefresh.bundle */; };
 		CDBBE5AB1E2B63D900782D5C /* LRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */; };
 		CDBBE5AD1E2B63F100782D5C /* LRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */; };
 		CDBBE5AF1E2B640D00782D5C /* LRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */; };
@@ -25,6 +26,7 @@
 		CD56A7081E2870CB0095125C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD56A70B1E2870CB0095125C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD56A70D1E2870CB0095125C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6CAA9A1E35DA2900809A5B /* LRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LRefresh.bundle; sourceTree = "<group>"; };
 		CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRefreshControl.swift; sourceTree = "<group>"; };
 		CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRefreshView.swift; sourceTree = "<group>"; };
 		CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LRefreshView.xib; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */,
 				CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */,
 				CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */,
+				CD6CAA9A1E35DA2900809A5B /* LRefresh.bundle */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6CAA9B1E35DA2900809A5B /* LRefresh.bundle in Resources */,
 				CD56A70C1E2870CB0095125C /* LaunchScreen.storyboard in Resources */,
 				CD56A7091E2870CB0095125C /* Assets.xcassets in Resources */,
 				CD56A7071E2870CB0095125C /* Main.storyboard in Resources */,
