@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LRefresh"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Refresh."
   s.description  = <<-DESC
   					RefreshRefreshRefreshRefreshRefreshRefresh
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/lieonCX/Refresh.git", :tag => s.version }
 
   s.source_files  = 'Source'
-  s.resources = ['Source/*.xib', 'Refresh/Assets.xcassets/*']
+  s.resources = ['Source/*.xib', 'Source/Icons/*.png']
   s.framework  = 'UIKit'
   s.requires_arc = true
 

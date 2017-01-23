@@ -12,6 +12,7 @@
 		CD56A7071E2870CB0095125C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD56A7051E2870CB0095125C /* Main.storyboard */; };
 		CD56A7091E2870CB0095125C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD56A7081E2870CB0095125C /* Assets.xcassets */; };
 		CD56A70C1E2870CB0095125C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD56A70A1E2870CB0095125C /* LaunchScreen.storyboard */; };
+		CD9525801E364860000D400E /* pulling.png in Resources */ = {isa = PBXBuildFile; fileRef = CD95257F1E364860000D400E /* pulling.png */; };
 		CDBBE5AB1E2B63D900782D5C /* LRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */; };
 		CDBBE5AD1E2B63F100782D5C /* LRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */; };
 		CDBBE5AF1E2B640D00782D5C /* LRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */; };
@@ -25,6 +26,7 @@
 		CD56A7081E2870CB0095125C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD56A70B1E2870CB0095125C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD56A70D1E2870CB0095125C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD95257F1E364860000D400E /* pulling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulling.png; sourceTree = "<group>"; };
 		CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRefreshControl.swift; sourceTree = "<group>"; };
 		CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRefreshView.swift; sourceTree = "<group>"; };
 		CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LRefreshView.xib; sourceTree = "<group>"; };
@@ -71,9 +73,18 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		CD95257E1E364860000D400E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CD95257F1E364860000D400E /* pulling.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		CDBBE5A91E2B63C300782D5C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CD95257E1E364860000D400E /* Icons */,
 				CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */,
 				CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */,
 				CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */,
@@ -140,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9525801E364860000D400E /* pulling.png in Resources */,
 				CD56A70C1E2870CB0095125C /* LaunchScreen.storyboard in Resources */,
 				CD56A7091E2870CB0095125C /* Assets.xcassets in Resources */,
 				CD56A7071E2870CB0095125C /* Main.storyboard in Resources */,
