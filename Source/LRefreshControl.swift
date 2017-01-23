@@ -7,18 +7,16 @@
 //
 
 import UIKit
-/// 负责刷新的逻辑
-private let contentOffsetY: CGFloat = 50.0
 
+private let contentOffsetY: CGFloat = 50.0
 enum RefrehState {
     case normal
     case pulling
     case wilRefresh
 }
 
-class LRefreshControl: UIControl {
+class LRefreshControl: UIView {
     public var refreshHandler: ( (Void) -> (Void))?
-    ///  刷新控件的要适用于UITableView和UICollectionView
     fileprivate weak var scrollView: UIScrollView?
     fileprivate lazy var refreshView: RefreshView = RefreshView.refreView()
     
@@ -32,7 +30,7 @@ class LRefreshControl: UIControl {
         setupUI()
     }
     
-   public func beginRefresh() {
+    public func beginRefresh() {
         guard let sv = scrollView else { return  }
         refreshView.state = .wilRefresh
         var inset = sv.contentInset
@@ -56,21 +54,17 @@ class LRefreshControl: UIControl {
 extension LRefreshControl {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        // 记录父视图
         guard let sv = newSuperview as? UIScrollView else { return  }
         scrollView = sv
-        // 适用KVO监听父视图的滚动
         scrollView?.addObserver(self, forKeyPath: "contentOffset", options: [], context: nil)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        // contenOffset的y值跟contentInset有关
         guard let sv = scrollView else { return  }
         let height = -(sv.contentInset.top + sv.contentOffset.y )
         if height < 0 {
             return
         }
-        // 可以根据高度设置刷新空间的frame
         self.frame = CGRect(x: 0,
                             y: -height,
                             width: sv.bounds.width,
@@ -84,7 +78,6 @@ extension LRefreshControl {
                 refreshView.state = .normal
             }
         } else {
-            // 放手 -- 判断是否超过临界点
             if refreshView.state == .pulling  {
                 print("准备开始刷新")
                 beginRefresh()
@@ -101,9 +94,7 @@ extension LRefreshControl {
 extension LRefreshControl {
     fileprivate  func setupUI() {
         backgroundColor = superview?.backgroundColor
-        /// 用系统原生的约束布局
         addSubview(refreshView)
-        
         refreshView.translatesAutoresizingMaskIntoConstraints = false
         addConstraint(NSLayoutConstraint(item: refreshView,
                                          attribute: .centerX,

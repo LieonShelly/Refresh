@@ -15,39 +15,35 @@
             <rect key="frame" x="0.0" y="0.0" width="203" height="59"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-3h-Oc5">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="pulling" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-3h-Oc5">
                     <rect key="frame" x="10" y="13.5" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="CNh-vQ-w6M"/>
                         <constraint firstAttribute="width" constant="32" id="jiw-nV-hfl"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉刷新..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfV-Ct-pW9">
-                    <rect key="frame" x="50" y="20.5" width="74" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下拉刷新..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfV-Ct-pW9">
+                    <rect key="frame" x="50" y="21" width="71.5" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tableview_loading" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-wE-YB6">
-                    <rect key="frame" x="10" y="13.5" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="HKg-eO-pej"/>
-                        <constraint firstAttribute="width" constant="32" id="WZ6-Ik-quj"/>
-                    </constraints>
-                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QYF-Yy-l3G">
+                    <rect key="frame" x="16" y="19.5" width="20" height="20"/>
+                    <color key="color" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <constraints>
                 <constraint firstItem="gTG-3h-Oc5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="2et-SR-avE"/>
-                <constraint firstItem="E6g-wE-YB6" firstAttribute="top" secondItem="gTG-3h-Oc5" secondAttribute="top" id="7aa-hP-GHg"/>
-                <constraint firstItem="jfV-Ct-pW9" firstAttribute="centerY" secondItem="E6g-wE-YB6" secondAttribute="centerY" id="AUR-eB-zbJ"/>
-                <constraint firstItem="jfV-Ct-pW9" firstAttribute="leading" secondItem="E6g-wE-YB6" secondAttribute="trailing" constant="8" id="WOL-2F-rxf"/>
-                <constraint firstItem="E6g-wE-YB6" firstAttribute="leading" secondItem="gTG-3h-Oc5" secondAttribute="leading" id="fXZ-Zc-l6M"/>
                 <constraint firstItem="gTG-3h-Oc5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kE4-M3-76i"/>
+                <constraint firstItem="QYF-Yy-l3G" firstAttribute="centerY" secondItem="gTG-3h-Oc5" secondAttribute="centerY" id="pLb-uk-SnH"/>
+                <constraint firstItem="QYF-Yy-l3G" firstAttribute="centerX" secondItem="gTG-3h-Oc5" secondAttribute="centerX" id="sWp-Dg-bgR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="loadingView" destination="E6g-wE-YB6" id="QfV-TS-EkF"/>
+                <outlet property="loadingView" destination="QYF-Yy-l3G" id="mOd-CD-vg1"/>
                 <outlet property="pullArrow" destination="gTG-3h-Oc5" id="Hls-vE-hlP"/>
                 <outlet property="textLabel" destination="jfV-Ct-pW9" id="a11-JT-TLH"/>
             </connections>
@@ -55,7 +51,6 @@
         </view>
     </objects>
     <resources>
-        <image name="tableview_loading" width="32" height="32"/>
-        <image name="tableview_pull_refresh" width="32" height="32"/>
+        <image name="pulling" width="30" height="30"/>
     </resources>
 </document>
