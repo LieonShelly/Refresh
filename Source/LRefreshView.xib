@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="203" height="59"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="pulling" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-3h-Oc5">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="pulling" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-3h-Oc5" customClass="pulling">
                     <rect key="frame" x="10" y="13.5" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="CNh-vQ-w6M"/>

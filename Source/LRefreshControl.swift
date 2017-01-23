@@ -15,7 +15,7 @@ enum RefrehState {
     case wilRefresh
 }
 
-class LRefreshControl: UIView {
+public class LRefreshControl: UIView {
     public var refreshHandler: ( (Void) -> (Void))?
     fileprivate weak var scrollView: UIScrollView?
     fileprivate lazy var refreshView: RefreshView = RefreshView.refreView()
@@ -52,14 +52,14 @@ class LRefreshControl: UIView {
 }
 
 extension LRefreshControl {
-    override func willMove(toSuperview newSuperview: UIView?) {
+    override public func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         guard let sv = newSuperview as? UIScrollView else { return  }
         scrollView = sv
         scrollView?.addObserver(self, forKeyPath: "contentOffset", options: [], context: nil)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         guard let sv = scrollView else { return  }
         let height = -(sv.contentInset.top + sv.contentOffset.y )
         if height < 0 {
@@ -83,7 +83,7 @@ extension LRefreshControl {
         }
     }
     
-    override func removeFromSuperview() {
+    override public func removeFromSuperview() {
         superview?.removeObserver(self, forKeyPath: "contentOffset")
         super.removeFromSuperview()
     }
