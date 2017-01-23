@@ -38,7 +38,7 @@ class RefreshView: UIView {
     }
     
     class func refreView() -> RefreshView {
-        let nib = UINib(nibName: "RefreshView", bundle: nil)
+        let nib = UINib(nibName: "LRefreshView", bundle: nil)
         guard let view = nib.instantiate(withOwner: nil, options: nil)[0] as? RefreshView else { return RefreshView() }
         return view
     }

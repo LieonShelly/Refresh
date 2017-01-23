@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Refresh"
+  s.name         = "LRefresh"
   s.version      = "0.0.1"
   s.summary      = "Refresh."
   s.description  = <<-DESC

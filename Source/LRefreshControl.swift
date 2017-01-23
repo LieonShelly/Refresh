@@ -1,5 +1,5 @@
 //
-//  RefreshControl.swift
+//  LRefreshControl.swift
 //  Refresh
 //
 //  Created by lieon on 2017/1/15.
@@ -16,7 +16,7 @@ enum RefrehState {
     case wilRefresh
 }
 
-class RefreshControl: UIControl {
+class LRefreshControl: UIControl {
     public var refreshHandler: ( (Void) -> (Void))?
     ///  刷新控件的要适用于UITableView和UICollectionView
     fileprivate weak var scrollView: UIScrollView?
@@ -53,7 +53,7 @@ class RefreshControl: UIControl {
     }
 }
 
-extension RefreshControl {
+extension LRefreshControl {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         // 记录父视图
@@ -98,7 +98,7 @@ extension RefreshControl {
         super.removeFromSuperview()
     }
 }
-extension RefreshControl {
+extension LRefreshControl {
     fileprivate  func setupUI() {
         backgroundColor = superview?.backgroundColor
         /// 用系统原生的约束布局

@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    fileprivate lazy var refresh: RefreshControl = {
-        let refreshControl = RefreshControl()
-        return refreshControl
+    fileprivate lazy var refresh: LRefreshControl = {
+        let refresh = LRefreshControl()
+        return refresh
     }()
 
     override func viewDidLoad() {
