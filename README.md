@@ -7,7 +7,7 @@
         refresh.refreshHandler = {
           /** insert your refresh action here **/
           DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-         /** not forget call endRefreshing when loading end **/
+         /** Do not forget call endRefreshing when loading end **/
             self.refresh.endRefreshing()
           }
         }
