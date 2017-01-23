@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/lieonCX/Refresh.git", :tag => s.version }
 
   s.source_files  = 'Source'
-  s.resources = ['Source/*.xib', 'Source/LRefresh.bundle']
+  s.resources = ['Source/*.xib', 'Refresh/Assets.xcassets/*']
   s.framework  = 'UIKit'
   s.requires_arc = true
 
