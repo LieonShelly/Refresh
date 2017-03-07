@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0668CD1E6E72B800C066E7 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0668CC1E6E72B800C066E7 /* Enum.swift */; };
+		CD1E2D181E6E596500EDCD67 /* ShineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E2D171E6E596500EDCD67 /* ShineView.swift */; };
 		CD56A7021E2870CB0095125C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56A7011E2870CB0095125C /* AppDelegate.swift */; };
 		CD56A7041E2870CB0095125C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56A7031E2870CB0095125C /* ViewController.swift */; };
 		CD56A7071E2870CB0095125C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD56A7051E2870CB0095125C /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0668CC1E6E72B800C066E7 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		CD1E2D171E6E596500EDCD67 /* ShineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShineView.swift; sourceTree = "<group>"; };
 		CD56A6FE1E2870CB0095125C /* Refresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD56A7011E2870CB0095125C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD56A7031E2870CB0095125C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				CDBBE5AA1E2B63D900782D5C /* LRefreshControl.swift */,
 				CDBBE5AC1E2B63F100782D5C /* LRefreshView.swift */,
 				CDBBE5AE1E2B640D00782D5C /* LRefreshView.xib */,
+				CD1E2D171E6E596500EDCD67 /* ShineView.swift */,
+				CD0668CC1E6E72B800C066E7 /* Enum.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDBBE5AB1E2B63D900782D5C /* LRefreshControl.swift in Sources */,
+				CD1E2D181E6E596500EDCD67 /* ShineView.swift in Sources */,
+				CD0668CD1E6E72B800C066E7 /* Enum.swift in Sources */,
 				CD56A7041E2870CB0095125C /* ViewController.swift in Sources */,
 				CDBBE5AD1E2B63F100782D5C /* LRefreshView.swift in Sources */,
 				CD56A7021E2870CB0095125C /* AppDelegate.swift in Sources */,

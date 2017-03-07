@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UITableViewController {
     fileprivate lazy var refresh: LRefreshControl = {
         let refresh = LRefreshControl()
+        refresh.needToShine(text: "我要操你")
         return refresh
     }()
 

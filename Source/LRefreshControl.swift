@@ -9,30 +9,38 @@
 import UIKit
 
 private let contentOffsetY: CGFloat = 50.0
-enum RefrehState {
-    case normal
-    case pulling
-    case wilRefresh
-}
 
 public class LRefreshControl: UIView {
     public var refreshHandler: ( (Void) -> (Void))?
     fileprivate weak var scrollView: UIScrollView?
     fileprivate lazy var refreshView: RefreshView = RefreshView.refreView()
+    fileprivate lazy var shineView: ShineView = {
+        let shineView = ShineView()
+        return shineView
+    }()
+
+    fileprivate var state: RefrehState = .normal {
+        didSet {
+            shineView.state = state
+            refreshView.state = state
+        }
+    }
     
     public init() {
         super.init(frame: CGRect())
-        setupUI()
+        addNormamRefesh()
+        addShineView()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupUI()
+        addNormamRefesh()
+        addShineView()
     }
     
     public func beginRefresh() {
         guard let sv = scrollView else { return  }
-        refreshView.state = .wilRefresh
+        state = .wilRefresh
         var inset = sv.contentInset
         inset.top += contentOffsetY
         sv.contentInset = inset
@@ -40,14 +48,20 @@ public class LRefreshControl: UIView {
     }
     
    public func endRefreshing() {
-        if refreshView.state != .wilRefresh {
+        if state != .wilRefresh {
             return
         }
         guard let sv = scrollView else { return  }
-        refreshView.state = .normal
+        state = .normal
         var inset = sv.contentInset
         inset.top -= contentOffsetY
         sv.contentInset = inset
+    }
+    
+    public func needToShine(text: String) {
+        shineView.isHidden = false
+        refreshView.isHidden = true
+        shineView.text = text
     }
 }
 
@@ -70,13 +84,13 @@ extension LRefreshControl {
                             width: sv.bounds.width,
                             height: height)
         if sv.isDragging {
-            if height > contentOffsetY && refreshView.state == .normal {
-                refreshView.state = .pulling
-            } else if height <= contentOffsetY && refreshView.state == .pulling {
-                refreshView.state = .normal
+            if height > contentOffsetY && state == .normal {
+                state = .pulling
+            } else if height <= contentOffsetY && state == .pulling {
+                state = .normal
             }
         } else {
-            if refreshView.state == .pulling  {
+            if state == .pulling  {
                 beginRefresh()
                 
             }
@@ -89,7 +103,7 @@ extension LRefreshControl {
     }
 }
 extension LRefreshControl {
-    fileprivate  func setupUI() {
+    fileprivate  func addNormamRefesh() {
         backgroundColor = superview?.backgroundColor
         addSubview(refreshView)
         refreshView.translatesAutoresizingMaskIntoConstraints = false
@@ -121,5 +135,33 @@ extension LRefreshControl {
                                          attribute: .notAnAttribute,
                                          multiplier: 1.0,
                                          constant: refreshView.bounds.height))
+    }
+    
+    fileprivate func addShineView() {
+        backgroundColor = superview?.backgroundColor
+        addSubview(shineView)
+        shineView.translatesAutoresizingMaskIntoConstraints = false
+        addConstraint(NSLayoutConstraint(item: shineView,
+                                         attribute: .centerX,
+                                         relatedBy: .equal,
+                                         toItem: self,
+                                         attribute: .centerX,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: shineView,
+                                         attribute: .bottom,
+                                         relatedBy: .equal,
+                                         toItem: self,
+                                         attribute: .bottom,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: shineView,
+                                         attribute: .width,
+                                         relatedBy: .equal,
+                                         toItem: nil,
+                                         attribute: .notAnAttribute,
+                                         multiplier: 1.0,
+                                         constant: UIScreen.main.bounds.width))
+        shineView.isHidden = true
     }
 }
